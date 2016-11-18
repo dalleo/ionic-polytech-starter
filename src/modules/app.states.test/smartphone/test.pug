@@ -1,2 +1,10 @@
-ion-view.view-test(view-title="Test")
-	ion-content Test
+ion-view.view-test(view-title="Ma premiere page")
+	ion-content
+		p(
+			translate-value-greeter="{{ ::from }}", 
+			translate=".CONTENT")
+			h2.Toinou c'est le plus fort <3
+
+		.button.button-positive(ui-state="STATE_TEST2") Page suivante bb 
+			i.icon.ion-paper-airplane
+		a.button.icon-left.ion-chevron-left.button-clear.button-dark(ui-state="STATE_HOME") Revenir

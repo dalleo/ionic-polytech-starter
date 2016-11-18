@@ -2,6 +2,7 @@
  * @module main
  */
 angular.module('main', [
+  'app.states.home',
   'app.states.test',
-  'app.states.home'
+  'app.states.test2'
 ]);
