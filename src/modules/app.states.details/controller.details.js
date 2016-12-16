@@ -7,12 +7,12 @@
   function DetailsController($scope, movieData) {
     var controller = this;
     
-    $scope.movieData = movieData
+    $scope.movieData = movieData;
   }
 
   module.controller('detailsController', [
     '$scope',
-    'movieData'
+    'movieData',
     DetailsController
   ]);
 
