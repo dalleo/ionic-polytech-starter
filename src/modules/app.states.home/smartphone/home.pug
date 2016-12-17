@@ -1,24 +1,24 @@
 ion-view.view-home(view-title="Home")
-	ion-header.bar-subheader.item-input-inset
-		label.item-input-wrapper
-			i.icon.ion-ios-search.placeholder-icon
-			input(
-				type='search',
-				ng-model="search.query",
-				placeholder='Rechercher')
-		button.button.button-clear.button-positive(
-			ng-disabled="search.query.length < 3",
-			on-tap="homeController.search()") OK
-			//i.ion-ios-color-wand
-	ion-content.has-subheader
-		ion-list
-			ion-item(ng-if="search.results.length <1")
-				|  No results
-			ion-item.bar.bar-header.bar-assertive.item-icon-right(
-				ng-repeat="result in search.results | orderBy:'-release_date'",
-				ui-states-params="{id: result.id}",
-				ui-states="STATE_DETAILS")
-				| {{ result.title }}
-				i.icon.ion-cash
- 	
+  ion-header.bar-subheader.item-input-inset
+    label.item-input-wrapper
+      i.icon.ion-ios-search.placeholder-icon
+      input(
+        type='search',
+        ng-model="search.query",
+        placeholder='Rechercher')
+    button.button.button-clear.button-positive(
+      ng-disabled="search.query.length < 3",
+      on-tap="homeController.search()") OK
+      //i.ion-ios-color-wand
+  ion-content.has-subheader
+    ion-list
+      ion-item(ng-if="search.results.length <1")
+        |  No results
+      ion-item.bar.bar-header.bar-assertive.item-icon-right(
+        ng-repeat="result in search.results | orderBy:'-release_date'",
+        ui-state-params="{id: result.id}",
+        ui-state="STATE_DETAILS")
+        | {{ result.title }}
+        i.icon.ion-cash
+
 

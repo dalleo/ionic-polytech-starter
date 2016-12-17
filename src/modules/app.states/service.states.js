@@ -9,7 +9,7 @@
 
     service.search = function(query){
       return httpService.get('/3/search/movie',{
-        language : i18nService.getlocale(),
+        language : i18nService.getLocale(),
         api_key: API_KEY,
         query: query
       }).then(function(data){
@@ -19,7 +19,7 @@
 
     service.getMovie = function(id){
       return httpService.get('/3/movie/'+id,{
-        language : i18nService.getlocale(),
+        language : i18nService.getLocale(),
         api_key: API_KEY
       });
     };
@@ -28,7 +28,7 @@
       return httpService.get('/3/movie',{
         'relase_date.lte' : moment().add(3, 'months').format('YYYY-MM-DD'),
         'relase_date.gte' : moment().format('YYYY-MM-DD'),
-        language : i18nService.getlocale(),
+        language : i18nService.getLocale(),
         api_key: API_KEY
       }).then(function(data){
         return _.sample(data.results) || $q.reject();
